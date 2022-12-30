@@ -1,0 +1,11 @@
+<VirtualHost *:80>
+	
+	ServerName zeus.com.br
+
+	ServerAdmin gabriel.moura@escolar.ifrn.edu.br
+	DocumentRoot /var/www/html/zeus.com.br/
+
+	ErrorLog ${APACHE_LOG_DIR}/zeus.com.br/error.log
+	CustomLog ${APACHE_LOG_DIR}/zeus.com.br/custom.log combined
+
+</VirtualHost>
