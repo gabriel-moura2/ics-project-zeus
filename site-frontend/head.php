@@ -3,5 +3,5 @@
 <head>
     <meta charset="UTF-8">
     <title>Zeus</title>
-    <link href="simple.min.css">
+    <link rel="stylesheet" href="simple.min.css">
 </head>
