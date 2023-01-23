@@ -5,7 +5,7 @@
     <?php include('header.php') ?>
     <h2>Entrar</h2>
     <br>
-    <form method="post" action="https://ics-project-zeus-backend.gabrielsantos8.repl.co/authentication.php">
+    <form method="post" action="authentication.php">
 
         <div>
             <label>Nome</label>
@@ -13,10 +13,10 @@
         </div>
         <div>
             <label>Senha</label>
-            <input type="password" name="lastname">
+            <input type="password" name="password">
         </div>
-        <button type="submit" class="btn btn-success">Entrar</button>&nbsp;
-		<a class="btn btn-info" href="index.php">Esqueci a senha</a>
+        <button type="submit">Entrar</button>
+		<a href="#">Esqueci a senha</a>
     </form>
 </body>
 </html>

@@ -2,12 +2,29 @@
 	include('head.php');
 ?>
 <body>
-    <?php include('header.php'); 
-		if (isset($_SESSION["user"])) echo $_SESSION["user"];
+	<?php
+		include('header.php'); 
+		if (isset($_SESSION["user"])) {
+			?>
+			<details open>
+				<summary>Pessoas</summary>
+				<a href="add_pessoa.php">Adicionar uma pessoa</a>
+				<table>
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Sobrenome</th>
+							<th>Raça</th>
+							<th>País</th>
+						</tr>
+					</thead>
+					<tbody>
+						
+					</tbody>
+				</table>
+			</details>
+			<?php
+		}
 	?>
-    <a href="login.php">Entrar</a>
-	<a href="signin.php">Cadastrar-se</a>
-	<a href="add_pessoa.php">Adicionar uma nova pessoa</a>
-	<br/><br/>
 </body>
 </html>
