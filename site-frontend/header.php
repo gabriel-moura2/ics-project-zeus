@@ -10,6 +10,7 @@
 				<li><a href="signin.php">Cadastrar-se</a></li>
 			<?php } else { ?>
 				<li><a href="logout.php">Sair</a></li>
+				<li><a href="perfil.php">Perfil</a></li>
 			<?php } ?>
 		</ul>
 	</nav>

@@ -9,7 +9,7 @@
 
         <div>
             <label>Nome</label>
-            <input type="text" name="firstname">
+            <input type="text" name="name">
         </div>
         <div>
             <label>Senha</label>
