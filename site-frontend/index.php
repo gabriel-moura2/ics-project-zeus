@@ -1,5 +1,6 @@
 <?php 
 	include('head.php');
+	include('connection.php');
 ?>
 <body>
 	<?php
@@ -12,14 +13,27 @@
 				<table>
 					<thead>
 						<tr>
+							<th>Id</th>
 							<th>Nome</th>
-							<th>Sobrenome</th>
-							<th>Raça</th>
-							<th>País</th>
+							<th>Email</th>
+							<th>Data de Nascimento</th>
 						</tr>
 					</thead>
 					<tbody>
-						
+						<?php                  
+							$query = 'SELECT * FROM Usuario';
+							$result = mysqli_query($db, $query) or die (mysqli_error($db));
+
+							while ($row = mysqli_fetch_assoc($result)) {
+				                                
+								echo '<tr>';
+									echo '<td>'. $row['Id'].'</td>';
+									echo '<td>'. $row['Nome'].'</td>';
+									echo '<td>'. $row['Email'].'</td>';
+									echo '<td>'. $row['DataDeNascimento'].'</td>';
+								echo '</tr> ';
+							}
+							?>
 					</tbody>
 				</table>
 			</details>

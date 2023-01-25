@@ -5,10 +5,10 @@
     <?php include('header.php') ?>
     <h2>Cadastrar</h2>
     <br>
-    <form method="post" action="zeus.backend.biz/signin.php">
+    <form method="post" action="signin_post.php">
 
         <div>
-            <label>Nome</label>
+            <label>Nome de Usuário</label>
             <input type="text" name="name">
         </div>
         <div>
