@@ -1,41 +1,27 @@
-CREATE TABLE IF NOT EXISTS Usuario
+CREATE TABLE Livro
 (
-  id INT NOT NULL AUTO_INCREMENT,
-  nome VARCHAR(150) NOT NULL,
-  senha VARCHAR(150) NOT NULL,
-  email VARCHAR(150) NOT NULL,
-  PRIMARY KEY (id)
-  UNIQUE (nome, email)
+	Id INT NULL,
+	Titulo VARCHAR(150) NOT NULL,
+	Descricao VARCHAR(200) NOT NULL,
+	PRIMARY KEY (Id)
 );
 
 CREATE TABLE Pessoa
 (
-  id INT NOT NULL AUTO_INCREMENT,
-  id_usuario INT NOT NULL,
-  nome VARCHAR(150) NOT NULL,
-  sobrenome VARCHAR(150) NOT NULL,
-  descrição TEXT,
-  PRIMARY KEY (id)
-  FOREIGN KEY (id_usuario) REFERENCES Usuario(id)
-);
 
-CREATE TABLE Pais
+	Id INT NULL,
+	Nome VARCHAR(150) NOT NULL,
+	Senha VARCHAR(150) NOT NULL,
+	Email VARCHAR(150) NOT NULL,
+	Data_nasc DATE NOT NULL,
+	PRIMARY KEY(Id)
+
+);
+CREATE TABLE Adiciona
 (
-  id INT NOT NULL AUTO_INCREMENT,
-  id_usuario INT NOT NULL,
-  nome VARCHAR(150) NOT NULL,
-  descrição TEXT,
-  PRIMARY KEY (id)
-  FOREIGN KEY (id_usuario) REFERENCES Usuario(id)
+	Id INT NULL,
+	Id INT NULL,
+	PRIMARY KEY (Id, Id),
+	FOREIGN KEY (Id) REFERENCES Livro(Id),
+	FOREIGN KEY (Id) REFERENCES Pessoa(Id)
 );
-
-CREATE TABLE vive
-(
-  id INT NOT NULL AUTO_INCREMENT
-  id_pessoa INT NOT NULL,
-  id_pais INT NOT NULL,
-  PRIMARY KEY (id)
-  FOREIGN KEY (id_pessoa) REFERENCES Pessoa(id)
-  FOREIGN KEY (id_pais) REFERENCES Pais(id)
-);
-
