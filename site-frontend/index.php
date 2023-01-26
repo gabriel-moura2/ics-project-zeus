@@ -4,10 +4,31 @@
 ?>
 <body>
 	<?php
-		include('header.php'); 
+		include('header.php');
+	?>
+	<details open>
+		<summary>Catálogo</summary>
+		<div style="display:flex;flex-wrap:wrap;">
+			<?php                  
+				$query = 'SELECT * FROM Livro';
+				$result = mysqli_query($db, $query) or die (mysqli_error($db));
+
+				while ($row = mysqli_fetch_assoc($result)) {
+									
+					echo '<figure style=margin:1em;>';
+						echo '<a href="detail_livro.php?id='.$row['Id'].'">';
+							echo '<img style="height:200px;" src="'.$row['Imagem'].'">';
+						echo '</a>';
+						echo '<figcaption style="width:150px">'. $row['Titulo'].'</figcaption>';
+					echo '</figure> ';
+				}
+			?>
+		</div>
+	</details>
+	<?php
 		if (isset($_SESSION["user"])) {
 			?>
-			<details open>
+			<details>
 				<summary>Livros</summary>
 				<a href="add_livro.php">Adicionar um livro</a>
 				<table>
@@ -26,11 +47,12 @@
 							while ($row = mysqli_fetch_assoc($result)) {
 				                                
 								echo '<tr>';
-									echo '<td>'.$row['Imagem'].'</td>';
+									echo '<td><img width=100 src="'.$row['Imagem'].'"></td>';
 									echo '<td>'. $row['Titulo'].'</td>';
 									echo '<td>';
-										echo '<a href="detail_livro.php?id='.$row['people_id'].'" >Ver livro</a><br/>';
-										echo '<a href="edit_livro.php?id='.$row['Id'].'">Editar</a><br/>';
+										echo '<a href="detail_livro.php?id='.$row['Id'].'" >Ver livro</a><br/>';
+										echo '<a href="edit_livro.php?
+id='.$row['Id'].'">Editar</a><br/>';
 										echo '<a href="remove_livro.php?id='.$row['Id'].'">Remover</a>';
 									echo '</td>';
 								echo '</tr> ';
@@ -41,7 +63,6 @@
 			</details>
 			<details>
 				<summary>Usuarios</summary>
-				<a href="add_pessoa.php">Adicionar uma pessoa</a>
 				<table>
 					<thead>
 						<tr>
