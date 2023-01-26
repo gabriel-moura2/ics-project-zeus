@@ -8,5 +8,5 @@
 
 ?>
 	<script type="text/javascript">
-        window.location = "/";
+        window.location = "zeus.com.br";
     </script>

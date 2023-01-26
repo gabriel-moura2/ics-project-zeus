@@ -15,5 +15,5 @@
 
 <script type="text/javascript">
 	alert("Successfully added.");
-	window.location = "index.php";
+	window.location = "zeus.com.br";
 </script>

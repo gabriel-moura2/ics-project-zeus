@@ -26,7 +26,8 @@
 		</div>
 	</details>
 	<?php
-		if (isset($_SESSION["user"])) {
+		include('zeus.backend.biz/select_user.php');
+		if ($logged) {
 			?>
 			<details>
 				<summary>Livros</summary>
@@ -40,10 +41,8 @@
 						</tr>
 					</thead>
 					<tbody>
-						<?php                  
-							$query = 'SELECT * FROM Livro WHERE Id_Usuario='.$_SESSION['user'];
+						<?php               
 							$result = mysqli_query($db, $query) or die (mysqli_error($db));
-
 							while ($row = mysqli_fetch_assoc($result)) {
 				                                
 								echo '<tr>';
@@ -53,7 +52,7 @@
 										echo '<a href="detail_livro.php?id='.$row['Id'].'" >Ver livro</a><br/>';
 										echo '<a href="edit_livro.php?
 id='.$row['Id'].'">Editar</a><br/>';
-										echo '<a href="remove_livro.php?id='.$row['Id'].'">Remover</a>';
+										echo '<a href="zeus.backend.biz/remove_livro.php?id='.$row['Id'].'">Remover</a>';
 									echo '</td>';
 								echo '</tr> ';
 							}

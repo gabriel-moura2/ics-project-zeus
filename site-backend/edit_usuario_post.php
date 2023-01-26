@@ -7,13 +7,14 @@
     <?php 
 
     $id = $_POST['id'];
-    $titulo = $_POST['Titulo'];
-    $link = $_POST['Imagem'];
-    $desc = $_POST['descricao'];
+    $nome = $_POST['name'];
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+    $data = $_POST['data'];
 
     include('connection.php');
 
-    $query = 'UPDATE Livro set  Titulo ="'.$titulo.'", Imagem ="'.$link.'",  Descricao ="'.$desc.'" WHERE Id = "'.$id.'"';
+    $query = 'UPDATE Usuario set  Nome="'.$nome.'", Senha="'.$senha.'",  Email="'.$email.'" WHERE Id="'.$id.'"';
     $result = mysqli_query($db, $query) or die(mysqli_error($db));
   
     ?>
@@ -21,7 +22,7 @@
   </body>
 
   <script type="text/javascript">
-			window.location = "index.php";
+			window.location = "zeus.com.br";
 		</script>
   
 </html>

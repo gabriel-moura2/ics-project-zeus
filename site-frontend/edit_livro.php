@@ -23,7 +23,7 @@
 
   <h2>Editando Livro</h2>
   <br>
-  <form method="post" action="edit_livro_post.php">
+  <form method="post" action="zeus.backend.biz/edit_livro_post.php">
       <input type="hidden" name="id" value="<?php echo $id; ?>" />
     <img width=200 style="float:left;margin:1em;" src=<?php echo $Link;?>>
     <div>

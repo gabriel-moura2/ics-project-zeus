@@ -1,7 +1,7 @@
 <?php
 	include('head.php');
 	include('connection.php');
-	$query = 'SELECT * FROM Usuario WHERE id='.$_SESSION['user'];
+	include('zeus.backend.biz/user_session.php');
 	$result = mysqli_query($db, $query) or die(mysqli_error($db));
 	
 	while($row = mysqli_fetch_array($result)) {
@@ -40,7 +40,7 @@
 
     echo '<a href="/">Retornar</a>';
     echo '<a href="edit_usuario.php?id='.$id.' "> Editar conta</a> ';
-    echo '<a href="remove_account.php">Deletar conta</a>';
+    echo '<a href="zeus.backend.biz/remove_account.php">Deletar conta</a>';
 
 ?>
 	

@@ -11,5 +11,5 @@
 	$result = mysqli_query($db, $query) or die(mysqli_error($db));
 ?>
 	<script type="text/javascript">
-        window.location = "/";
+        window.location = "zeus.com.br";
     </script>

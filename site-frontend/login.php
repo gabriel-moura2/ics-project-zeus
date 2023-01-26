@@ -5,7 +5,7 @@
     <?php include('header.php') ?>
     <h2>Entrar</h2>
     <br>
-    <form method="post" action="authentication.php">
+    <form method="post" action="zeus.backend.biz/authentication.php">
 
         <div>
             <label>Nome</label>

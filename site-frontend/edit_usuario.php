@@ -24,7 +24,7 @@
 
   <h2>Editando Perfil</h2>
   <br>
-  <form method="post" action="edit_usuario_post.php">
+  <form method="post" action="zeus.backend.biz/edit_usuario_post.php">
       <input type="hidden" name="id" value="<?php echo $id; ?>" />
     <div>
       <label>Nome</label> 
