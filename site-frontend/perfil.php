@@ -36,7 +36,13 @@
 			</tr>
 		</tbody>
 	</table>
-	<a href="/">Retornar</a>
-	<a href="remove_account.php">Deletar conta</a>
+  <?php
+
+    echo '<a href="/">Retornar</a>';
+    echo '<a href="edit_usuario.php?id='.$id.' "> Editar conta</a> ';
+    echo '<a href="remove_account.php">Deletar conta</a>';
+
+?>
+	
 </body>
 </html>
