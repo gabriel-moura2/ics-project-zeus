@@ -14,6 +14,9 @@
 		
 	$_SESSION["user"] = $id;
 ?>
-	<script type="text/javascript">
+	
+
+<script type="text/javascript">
         window.location = "/";
     </script>
+      

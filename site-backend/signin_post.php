@@ -6,10 +6,10 @@
 	$senha = $_POST['password'];
 	$data = $_POST['date'];
 
-	$query = "INSERT INTO Usuario (`Id`, `Nome`, `Email`, `Senha`, `DataDeNascimento`) VALUES (NULL, '" . $nome . "', '" . $email . "', '" . $senha . "', '" . $data . "')";
+	$query = "INSERT INTO Usuario (`Id`, `Nome`, `Email`, `Senha`, `Data_nasc`) VALUES (NULL, '" . $nome . "', '" . $email . "', '" . $senha . "', '" . $data . "')";
 	
 	$result = mysqli_query($db, $query) or die(mysqli_error($db));
 ?>
 	<script type="text/javascript">
-        window.location = $frontend;
+        window.location = <?php '"'.$frontend.'"' ?>;
     </script>

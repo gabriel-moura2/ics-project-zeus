@@ -15,5 +15,5 @@
 
 <script type="text/javascript">
 	alert("Successfully added.");
-	window.location = $frontend;
+	window.location = <?php '"'.$frontend.'"' ?>;
 </script>

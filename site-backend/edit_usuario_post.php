@@ -22,7 +22,7 @@
   </body>
 
   <script type="text/javascript">
-			window.location = $frontend;
+			window.location = <?php '"'.$frontend.'"' ?>;
 		</script>
   
 </html>
