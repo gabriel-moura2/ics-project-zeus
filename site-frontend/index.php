@@ -1,6 +1,6 @@
 <?php 
 	include('head.php');
-	include('connection.php');
+	include('../site-backend/connection.php');
 ?>
 <body>
 	<?php
@@ -26,8 +26,7 @@
 		</div>
 	</details>
 	<?php
-		include('zeus.backend.biz/select_user.php');
-		if ($logged) {
+		if (isset($_SESSION['user'])) {
 			?>
 			<details>
 				<summary>Livros</summary>

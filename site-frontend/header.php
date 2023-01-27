@@ -3,8 +3,7 @@
 	<nav>
 		<ul>
 			<?php
-				include('zeus.backend.biz/user_session.php')
-				if (! $logged) {
+				if (! isset($_SESSION['user'])) {
 			?>
 				
 		    	<li><a href="login.php">Entrar</a></li>

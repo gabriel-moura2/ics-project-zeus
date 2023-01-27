@@ -1,7 +1,7 @@
 <?php
 	include('head.php');
 	include('connection.php');
-	include('zeus.backend.biz/user_session.php');
+	$query = 'SELECT * FROM Livro WHERE Id_Usuario='.$_SESSION['user'];
 	$result = mysqli_query($db, $query) or die(mysqli_error($db));
 	
 	while($row = mysqli_fetch_array($result)) {
