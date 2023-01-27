@@ -5,7 +5,7 @@
     <?php include('header.php') ?>
     <h2>Cadastrar</h2>
     <br>
-    <form method="post" action="zeus.backend.biz/signin_post.php">
+    <form method="post" action=<?php echo $backend."/signin_post.php"?>>
 
         <div>
             <label>Nome de Usuário</label>

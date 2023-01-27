@@ -1,5 +1,6 @@
 <?php 
-
+	include('connection.php');
+	
 	if ( ! session_id() ) @ session_start();
 
 	session_unset();
@@ -8,5 +9,5 @@
 
 ?>
 	<script type="text/javascript">
-        window.location = "zeus.com.br";
+        window.location = $frontend;
     </script>

@@ -1,6 +1,5 @@
 <?php
 	include('head.php');
-	include('connection.php');
 ?>
 <body>
 	<?php
@@ -18,8 +17,8 @@
 		<img width=200 style="float:left;margin:1em;" src=<?php echo $image ?>>
 		<h2><?php echo $titulo ?></h2>
 		<p><?php echo $desc ?></p>
-    <a href="index.php">Retornar </a>
 	</article>
+    <a href="/">Retornar</a>
 	
 	
 </body>

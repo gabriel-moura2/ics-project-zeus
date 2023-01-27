@@ -1,6 +1,5 @@
 <?php 
 	include('head.php');
-	include('../site-backend/connection.php');
 ?>
 <body>
 	<?php

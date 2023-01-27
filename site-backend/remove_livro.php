@@ -4,5 +4,5 @@
   $result = mysqli_query($db, $query) or die(mysqli_error($db));
 ?>
 <script type="text/javascript">
-		window.location = "zeus.com.br";
+		window.location = $frontend;
 	</script>

@@ -5,7 +5,7 @@
     <?php include('header.php') ?>
     <h2>Adicionar novo livro</h2>
     <br>
-    <form method="post" action="zeus.backend.biz/add_livro_post.php">
+    <form method="post" action=<?php echo $backend."/add_livro_post.php"?>>
         <div>
             <label>Titulo</label>
             <input type="text" name="titulo">

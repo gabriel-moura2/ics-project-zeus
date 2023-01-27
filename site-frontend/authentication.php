@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-	include('connection.php');
+	include('../site-backend/connection.php');
 
 	$query = 'SELECT * FROM Usuario WHERE Nome=\''. $_POST['name'].'\'';
 	
@@ -15,5 +15,5 @@
 	$_SESSION["user"] = $id;
 ?>
 	<script type="text/javascript">
-        window.location = "zeus.com.br";
+        window.location = "/";
     </script>

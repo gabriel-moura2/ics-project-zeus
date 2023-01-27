@@ -21,7 +21,7 @@
   </body>
 
   <script type="text/javascript">
-			window.location = "zeus.com.br";
+			window.location = $frontend;
 		</script>
   
 </html>

@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php
+	session_start();
+	include('../site-backend/connection.php');
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

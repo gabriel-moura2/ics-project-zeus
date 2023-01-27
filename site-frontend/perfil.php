@@ -1,7 +1,6 @@
 <?php
 	include('head.php');
-	include('connection.php');
-	$query = 'SELECT * FROM Livro WHERE Id_Usuario='.$_SESSION['user'];
+	$query = 'SELECT * FROM Usuario WHERE Id='.$_SESSION['user'];
 	$result = mysqli_query($db, $query) or die(mysqli_error($db));
 	
 	while($row = mysqli_fetch_array($result)) {
@@ -10,7 +9,7 @@
     	$nome = $row['Nome'];
     	$email = $row['Email'];
     	$date = $row['DataDeNascimento'];
-             
+    
   	}
               
 ?>
@@ -40,7 +39,7 @@
 
     echo '<a href="/">Retornar</a>';
     echo '<a href="edit_usuario.php?id='.$id.' "> Editar conta</a> ';
-    echo '<a href="zeus.backend.biz/remove_account.php">Deletar conta</a>';
+    echo '<a href="'.$backend.'/remove_account.php">Deletar conta</a>';
 
 ?>
 	
